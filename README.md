@@ -3,6 +3,8 @@ Sunflower Farmers NFT Game automated bot.IT IS NOT a cheat or hack bot.
 Totally open source, you can check all code.
 
 # Functions enabled:
+ - auto login
+ - auto polygon setup
  - plant
  - monitor
  - harvest
