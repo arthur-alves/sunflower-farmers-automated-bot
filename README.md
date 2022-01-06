@@ -40,6 +40,18 @@ private:
   passwd: your_password
 ```
 
+Linux users can use env vars. Just enable this variable:
+
+```
+set_linux_env: true
+```
+After that set the variable names in your system:
+
+```
+SUNFLOWER (secret Phrase)
+PASSWD (password)
+```
+
 ### For multi account open the config.yaml file and edit this lines.
 **Note: On multi acc, the browser will always be closed to avoid many system memory usage.** 
 
