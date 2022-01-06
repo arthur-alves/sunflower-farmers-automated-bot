@@ -5,7 +5,7 @@ Totally open source, you can check all code.
 ### Please, consider donate some if I help you in any way
 My wallet address:
 
-**0xFA60A4E861D363fBCb8A1Db2ac31487C04CeA402**
+**0x82249B72Fb97eB5A54CF769f91f049ecaF31F7bd**
 
 
 # Instalation:
