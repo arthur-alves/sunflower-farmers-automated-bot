@@ -7,6 +7,10 @@ My wallet address:
 
 **0x82249B72Fb97eB5A54CF769f91f049ecaF31F7bd**
 
+![Sunflower-automated-bot](example.png)
+
+
+
 
 # Instalation:
 
