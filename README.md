@@ -69,3 +69,8 @@ On cmd (windows) or console(unix systems) start the bot with command:
 python main.py
 ```
 
+Enjoy it guys.
+
+# Please Help
+I've not tested on windows. If you want to help, please test by yourself, and tell us about.
+PR are welcome
