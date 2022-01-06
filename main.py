@@ -69,8 +69,6 @@ def start_game():
         tries += 1
         time.sleep(1)
 
-    log('Select Item to plant...')
-    select_basket()
     time.sleep(3)
     if not settings['use_multi_acc']:
         while True:
@@ -99,8 +97,10 @@ def in_game_process():
     log('Checking collectables items...', 'white')
     collect_plant()
     time.sleep(1)
-    log('Places available to plant: %s.' % plant_seed(), 'white')
+    log('Places available to plant: %s.' % count_free_slots(), 'white')
     time.sleep(1)
+    log('Select Item to plant...')
+    select_basket()
     log('Planting selected Seed...', 'white')
     plant_seed()
     time.sleep(1)
@@ -317,7 +317,7 @@ def multi_acc_change():
     PASSWD = selected_acc[1]
     SELECTED_PLANT = selected_acc[2]
     MULTI_ACC_CURRENT += 1
-    if MULTI_ACC_CURRENT < MULTI_ACC_TOTAL:
+    if MULTI_ACC_CURRENT >= MULTI_ACC_TOTAL:
         MULTI_ACC_CURRENT = 0
 
 
@@ -339,7 +339,11 @@ def setup_driver():
 
 def get_new_driver():
     """Close and open a new driver."""
+    log('Closing browser.')
+    global DRIVER
     DRIVER.close()
+    DRIVER = None
+    log('Setup new Driver.')
     setup_driver()
 
 
@@ -357,8 +361,10 @@ def main():
         log(['MULTI ACCOUNT MODE SELECTED...'])
         while True:
             multi_acc_change()
-            get_new_driver()
             start_game()
+            get_new_driver()
+            time.sleep(5)
+
 
 
 
