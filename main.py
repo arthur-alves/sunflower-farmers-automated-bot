@@ -357,7 +357,9 @@ def main():
         log(['MULTI ACCOUNT MODE SELECTED...'])
         while True:
             multi_acc_change()
+            get_new_driver()
             start_game()
+
 
 
 if __name__ == '__main__':

@@ -33,6 +33,10 @@ pip install requirements.txt
 
 # Settings:
 
+###Create config.yaml file:
+**Make a copy from file config_example.yaml and name it as config.yaml**
+
+
 ### For single account open the config.yaml file and edit these lines.
 
 Note: Please take care with your secret phrase.
