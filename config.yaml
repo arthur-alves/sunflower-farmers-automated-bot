@@ -1,0 +1,33 @@
+---
+# In minutes, default 5 minutes
+time_monitor: 10
+# Max waiting time for the game to respond.
+max_wait_time: 120
+# Plant craft selected
+# OPTIONS:
+#   sunflower
+#   potato
+#   pumpkin
+#   beetroot
+#   caluflower
+#   parsnip
+selected_plant: caluflower
+# I beg you, please!! Take care with your secret phrase and password, don't show it to nobody.
+# Linux users can avoid these, and use environ variable instead this.
+# user for phrase the key SUNFLOWER and for password the key PASSWD on your environ
+private:
+  secret_phrase: your wallet phrase
+  passwd: yout password here
+# To use multi account set the use_multi_acc: true
+use_multi_acc: false
+# multi list with phrase and passwd
+# Usage:
+# [phrase 1, password1]
+# [phrase 2, password2]
+# [phrase 3, password3]
+# Uncomment below lines to use multi account
+# multi_acc_list:
+#   - [phrase, passwd]
+
+# set true if you want to use environ variables.
+set_linux_env: false
