@@ -33,7 +33,7 @@ pip install requirements.txt
 
 # Settings:
 
-### For single account open the config.yaml file and edit this lines.
+### For single account open the config.yaml file and edit these lines.
 
 Note: Please take care with your secret phrase.
 ```
@@ -54,7 +54,7 @@ SUNFLOWER (secret Phrase)
 PASSWD (password)
 ```
 
-### For multi account open the config.yaml file and edit this lines.
+### For multi account open the config.yaml file and edit these lines.
 **Note: On multi acc, the browser will always be closed to avoid many system memory usage.** 
 
 Uncomment these lines and set *use_multi_acc* to 'true'
