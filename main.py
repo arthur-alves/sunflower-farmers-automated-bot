@@ -21,7 +21,7 @@ OPTIONS.add_argument("--disable-gpu")
 OPTIONS.add_argument("--disable-software-rasterizer")
 
 S = Service(ChromeDriverManager().install())
-DRIVER = webdriver.Chrome(service=S, options=OPTIONS)
+DRIVER = None
 GLOBAL_SLEEP = settings['time_monitor']
 SELECTED_PLANT = settings['selected_plant']
 MAX_WAIT_TIME = settings['max_wait_time']
@@ -319,12 +319,31 @@ def multi_acc_change():
         MULTI_ACC_CURRENT = 0
 
 
+def setup_driver():
+    """Setup start driver."""
+    tries = 0
+    max_tries = 5
+    global DRIVER
+    while not DRIVER:
+        try:
+            DRIVER = webdriver.Chrome(service=S, options=OPTIONS)
+        except:
+            if tries <= max_tries:
+                raise ValueError('Was not possible to mount driver.')
+            tries += 1
+            log('Failed to mount driver instance. Trying again...', 'red')
+            time.sleep(0.5)
+
+
 def get_new_driver():
+    """Close and open a new driver."""
     DRIVER.close()
-    return webdriver.Chrome(service=S, options=OPTIONS)
+    setup_driver()
+
 
 def main():
     """Main Process."""
+    setup_driver()
     if not settings['use_multi_acc']:
         log(['SINGLE ACCOUNT MODE SELECTED...'])
         if settings['set_linux_env']:
@@ -337,10 +356,6 @@ def main():
         while True:
             multi_acc_change()
             start_game()
-            global DRIVER
-            DRIVER = get_new_driver()
-
-    time.sleep(3)
 
 
 if __name__ == '__main__':
