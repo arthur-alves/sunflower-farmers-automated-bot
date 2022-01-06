@@ -61,9 +61,9 @@ Uncomment these lines and set *use_multi_acc* to 'true'
 ```
 use_multi_acc: true
 multi_acc_list:
-  - [phrase1, passwd1]
-  - [phrase2, passwd2]  
-  - [phrase3, passwd3]
+  - [phrase1, passwd1, plant_choice_1]
+  - [phrase2, passwd2, plant_choice_2]
+  - [phrase3, passwd3, plant_choice_3]
 ```
 
 **Changing vegetables:**

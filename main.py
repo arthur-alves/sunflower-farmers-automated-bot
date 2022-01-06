@@ -310,10 +310,12 @@ def multi_acc_change():
     global PHRASE
     global PASSWD
     global MULTI_ACC_CURRENT
+    global SELECTED_PLANT
     MULTI_ACC_TOTAL = len(login_list)
     selected_acc = login_list[MULTI_ACC_CURRENT]
     PHRASE = selected_acc[0]
-    PASSWD = selected_acc[0]
+    PASSWD = selected_acc[1]
+    SELECTED_PLANT = selected_acc[2]
     MULTI_ACC_CURRENT += 1
     if MULTI_ACC_CURRENT < MULTI_ACC_TOTAL:
         MULTI_ACC_CURRENT = 0

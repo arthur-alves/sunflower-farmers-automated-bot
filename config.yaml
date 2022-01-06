@@ -20,14 +20,19 @@ private:
   passwd: yout password here
 # To use multi account set the use_multi_acc: true
 use_multi_acc: false
+
+# #####################################
+# USAGE:
 # multi list with phrase and passwd
 # Usage:
-# [phrase 1, password1]
-# [phrase 2, password2]
-# [phrase 3, password3]
+# [phrase 1, password1, plant_choice_1]
+# [phrase 2, password2, plant_choice_2]
+# [phrase 3, password3, plant_choice_3]
+# #####################################
+
 # Uncomment below lines to use multi account
 # multi_acc_list:
-#   - [phrase, passwd]
+#   - [phrase, passwd, plant_choice_1]
 
 # set true if you want to use environ variables.
 set_linux_env: false
