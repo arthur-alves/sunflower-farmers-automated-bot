@@ -85,7 +85,7 @@ def in_game_process():
     progress_plants = count_progress_plants()
     log('Harvest in progress ---------- Total: [%s]' % progress_plants)
     log('Checking empty places...')
-    if not count_free_slots() and progress_plants:
+    if progress_plants == total_harvest_able():
         log('Maximum capacity reached. No places to plant.', 'red')
         log('So ok...')
         if not settings['use_multi_acc']:
@@ -99,7 +99,7 @@ def in_game_process():
     log('Checking collectables items...', 'white')
     collect_plant()
     time.sleep(1)
-    log('Places available to plant: %s.' % plant_seed(True), 'white')
+    log('Places available to plant: %s.' % plant_seed(), 'white')
     time.sleep(1)
     log('Planting selected Seed...', 'white')
     plant_seed()
