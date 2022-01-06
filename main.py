@@ -85,7 +85,7 @@ def in_game_process():
     progress_plants = count_progress_plants()
     log('Harvest in progress ---------- Total: [%s]' % progress_plants)
     log('Checking empty places...')
-    if not count_free_slots():
+    if not count_free_slots() and progress_plants:
         log('Maximum capacity reached. No places to plant.', 'red')
         log('So ok...')
         if not settings['use_multi_acc']:
